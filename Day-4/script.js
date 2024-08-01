@@ -10,29 +10,55 @@ for(let i = 1 ; i <=10; i++){
 
 //Task3
 let i = 1;
-while(i <= 10){
-  console.log(i + i);
+let sum = 0;
+while(i<=10){
+  sum+= i;
   i++;
 }
+console.log(sum);
 
 //Task4
- let n = 10;
- while(n >= 1){
-  console.log(n);
-  n--;
- }
-
- //Task5
- let x = 1;
- do{
-  console.log(x);
-  x++;
- }
- while(x<=5);
-
- //Task6
-for(let i = 1; i<=5; i++){
-  for(let y = 1; y<=5 ; y+=2){
-    console.log('*' * '*');
-  }
+let reverse = 10;
+while(reverse >= 1){
+  console.log(reverse);
+  reverse--;
 }
+
+//Task5
+let num5 = 1;
+do{
+  console.log(num5);
+  num5++;
+}
+while(num5 <= 5);
+
+//Task6
+let factorialNum = 6;
+let factorial = 1;
+do{
+  factorial *= factorialNum;
+  factorialNum--;
+}while(factorialNum >=1 )
+console.log(factorial);
+
+// Task7
+for(let num = 1; num <=5; num++){
+  let sum = '';
+  for(let row = 1; row <= num; row++){
+    sum += '* ';
+  }
+  console.log(sum);
+}
+
+//Task8
+for(let num = 1; num <= 10; num++){
+  if(num === 5) continue;
+  console.log(num);
+}
+
+//Task9
+for(let num = 1; num <= 10; num++){
+  if(num === 7) break;
+  console.log(num);
+}
+
