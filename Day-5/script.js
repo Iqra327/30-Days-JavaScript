@@ -55,13 +55,11 @@ const matchCharacter = () => {
 matchCharacter();
 
 //Task7
-function productNum(){
-  const num1 = 6;
-  const num2 = 2;
+function productNum(num1, num2){
   const product = num1 * num2;
   console.log(`Product of ${num1} and ${num2} is: ${product}`);
 }
-productNum();
+productNum(2, 6);
 
 //Task8
 function greet(name, age){
