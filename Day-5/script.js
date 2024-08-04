@@ -1,4 +1,4 @@
-//Task1
+//Task1-function declaration
 function checkNumber(num){
   if(num % 2 === 0){
     console.log(`Number: ${num} is even`);
@@ -17,7 +17,7 @@ function calculateSquare(num){
 }
 calculateSquare(8);
 
-//Task3
+//Task3-function expression
 const maxNum = (num1, num2) => {
   if(num1 > num2){
     console.log(`Number ${num1} is max than ${num2}`);
@@ -37,7 +37,7 @@ const concatStrings = function () {
 }
 concatStrings();
 
-//Task5
+//Task5-- arrow functions
 const numberSum = (num1,num2) => num1 + num2;
 console.log(numberSum(5, 20));
 
@@ -54,7 +54,7 @@ const matchCharacter = () => {
 }
 matchCharacter();
 
-//Task7
+//Task7--function parameter, default value
 function productNum(num1, num2){
   const product = num1 * num2;
   console.log(`Product of ${num1} and ${num2} is: ${product}`);
@@ -71,7 +71,39 @@ function greet(name, age){
 
 greet('Iqra', 22);
 
-//Task9
+//Task9--High Order Functions
+function callFuncMultiTimes(func, times){
+  for (let i = 1; i <= times; i++){
+    func();
+  }
+}
 
+function addNumbers(){
+  console.log(4+8);
+}
+
+callFuncMultiTimes(addNumbers, 3);
+
+//another example
+function callFuncMultiTimes(func, times, ...args){
+  for(let i = 1; i <= times; i++){
+    func(...args);
+  }
+}
+const sumNumbers = (a,b) => console.log(a+b) ;
+
+callFuncMultiTimes(sumNumbers,2, 10, 5);
 
 //Task10
+function addNum(x){
+  return x + 8;
+}
+function mulitplyNum(x){
+  return x * x; 
+}
+
+function mulitplyAddNum(func1, func2, value){
+ return func1(func2(value));
+};
+
+console.log(mulitplyAddNum(addNum, mulitplyNum, 4));
